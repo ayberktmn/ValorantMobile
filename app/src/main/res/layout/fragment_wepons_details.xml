@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailsFragment">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/agentIconImageView"
+        android:layout_width="416dp"
+        android:layout_height="399dp"
+        android:layout_marginBottom="9dp"
+        android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/agentIconImageView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ImageView.Corner" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/backButtonImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="4dp"
+        android:src="@drawable/ic_back_white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/WeponsName"
+        android:layout_width="175dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="260dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Fade" />
+
+    <TextView
+        android:id="@+id/weaponsRole"
+        style="@style/GeneralTextStyle"
+        android:layout_width="197dp"
+        android:layout_height="54dp"
+        android:textSize="20sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4"
+        tools:text="Initiator" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/agentIconImageView2"
+        android:layout_width="411dp"
+        android:layout_height="459dp"
+        android:layout_marginTop="9dp"
+        android:background="#CDDC39"
+        android:rotationX="180"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agentIconImageView"
+        app:shapeAppearanceOverlay="@style/ImageView.Corner" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.421"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agentIconImageView"
+        app:layout_constraintVertical_bias="0.849">
+
+        <TextView
+            android:id="@+id/txtabilities"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Head Damage :"
+            android:textColor="#0B29D3"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAbilities"
+            android:layout_width="223dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Abilities:"
+            android:textColor="#950000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/target" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="369dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/agentIconImageView2">
+
+        <TextView
+            android:id="@+id/txtabilities1"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Body Damage :"
+            android:textColor="#073DFF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAbilities2"
+            android:layout_width="223dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Abilities:"
+            android:textColor="#950000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/shot" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="190dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/agentIconImageView2">
+
+        <TextView
+            android:id="@+id/txtabilities3"
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Leg Damage :"
+            android:textColor="#0730FF"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtAbilities3"
+            android:layout_width="217dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Abilities:"
+            android:textColor="#950000"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/foot" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="181dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="390dp"
+        android:gravity="center"
+        android:text="Features"
+        android:textColor="#0728FF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/agentIconImageView"
+        app:layout_constraintVertical_bias="0.083" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcylerSkins"
+        android:layout_width="409dp"
+        android:layout_height="169dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
