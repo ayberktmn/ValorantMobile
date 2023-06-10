@@ -16,11 +16,8 @@ class AbilityViewModel@Inject constructor(private val repo: AgendsRetrofit) : Vi
 
 
     init {
-
         abilityList = MutableLiveData()
     }
-
-
 
     fun getObserverLiveAbilityData(): MutableLiveData<Data> {
         return abilityList

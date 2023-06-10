@@ -8,9 +8,11 @@
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/agentIconImageView"
-        android:layout_width="414dp"
-        android:layout_height="383dp"
+        android:layout_width="410dp"
+        android:layout_height="398dp"
+        android:layout_marginBottom="9dp"
         android:background="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/agentIconImageView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -71,12 +73,12 @@
         app:layout_constraintVertical_bias="0.423"
         tools:text="Initiator" />
 
+
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/agentIconImageView2"
-        android:layout_width="413dp"
-        android:layout_height="374dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginBottom="1dp"
+        android:layout_width="411dp"
+        android:layout_height="459dp"
+        android:layout_marginTop="9dp"
         android:background="@color/blue"
         android:rotationX="180"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -84,35 +86,33 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agentIconImageView"
-        app:layout_constraintVertical_bias="1.0"
         app:shapeAppearanceOverlay="@style/ImageView.Corner" />
 
     <TextView
         android:id="@+id/txtaciklama"
-        android:layout_width="395dp"
-        android:layout_height="100dp"
+        android:layout_width="397dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:text="TextView"
         android:textColor="#FFFFFF"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/agentIconImageView2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/agentIconImageView"
-        app:layout_constraintVertical_bias="0.948" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
     <LinearLayout
         android:id="@+id/linearLayout7"
-        android:layout_width="373dp"
-        android:layout_height="45dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.421"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/agentIconImageView"
-        app:layout_constraintVertical_bias="0.795">
+        app:layout_constraintVertical_bias="0.849">
 
         <TextView
             android:id="@+id/txtabilities"
@@ -124,7 +124,7 @@
 
         <TextView
             android:id="@+id/txtAbilities"
-            android:layout_width="241dp"
+            android:layout_width="240dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Abilities:"
@@ -142,14 +142,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout5"
-        android:layout_width="372dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="119dp"
-        android:layout_marginBottom="30dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="124dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/agentIconImageView2">
 
@@ -163,7 +163,7 @@
 
         <TextView
             android:id="@+id/txtAbilities2"
-            android:layout_width="241dp"
+            android:layout_width="240dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Abilities:"
@@ -173,7 +173,7 @@
         <ImageView
 
             android:id="@+id/imgAbility1"
-            android:layout_width="46dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/ic_launcher_foreground" />
@@ -182,13 +182,14 @@
 
     <LinearLayout
         android:id="@+id/linearLayout6"
-        android:layout_width="372dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="162dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="190dp"
         android:layout_marginBottom="20dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.487"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/agentIconImageView2">
 
@@ -202,7 +203,7 @@
 
         <TextView
             android:id="@+id/txtAbilities3"
-            android:layout_width="242dp"
+            android:layout_width="236dp"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Abilities:"
@@ -211,7 +212,7 @@
 
         <ImageView
             android:id="@+id/imgAbility2"
-            android:layout_width="42dp"
+            android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:src="@drawable/ic_launcher_foreground" />
@@ -220,13 +221,15 @@
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="372dp"
+        android:layout_width="370dp"
         android:layout_height="50dp"
-        android:layout_marginTop="203dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginBottom="20dp"
         android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintBottom_toTopOf="@+id/txtaciklama"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.41"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/agentIconImageView2">
 
@@ -240,8 +243,8 @@
 
         <TextView
             android:id="@+id/txtAbilities4"
-            android:layout_width="243dp"
-            android:layout_height="40dp"
+            android:layout_width="234dp"
+            android:layout_height="50dp"
             android:gravity="center"
             android:text="Abilities:"
             android:textColor="#F8F8F8"
@@ -249,42 +252,52 @@
 
         <ImageView
             android:id="@+id/imgAbility3"
-            android:layout_width="48dp"
-            android:layout_height="40dp"
+            android:layout_width="22dp"
+            android:layout_height="50dp"
             android:layout_weight="1"
             android:src="@drawable/ic_launcher_foreground" />
 
     </LinearLayout>
 
-
     <ImageButton
         android:id="@+id/btnimageVolume"
-        android:layout_width="52dp"
-        android:layout_height="48dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="24dp"
         android:backgroundTint="#4CAF50"
         android:src="@drawable/volume"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.412" />
+        app:layout_constraintVertical_bias="0.397" />
 
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="176dp"
-        android:layout_height="30dp"
+        android:layout_width="181dp"
+        android:layout_height="38dp"
         android:layout_marginTop="390dp"
         android:gravity="center"
         android:text="Features"
-        android:textColor="#0CC313"
+        android:textColor="#FFC107"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.46"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/agentIconImageView"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.083" />
+
+    <ImageView
+        android:id="@+id/imgrole"
+        android:layout_width="82dp"
+        android:layout_height="78dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.939"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.021" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

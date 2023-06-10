@@ -75,7 +75,7 @@ class DetailsFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         viewDetailsModel.getObserverLiveData().observe(viewLifecycleOwner,object : Observer<Agends> {
             override fun onChanged(t: Agends?) {
-              //  progressDialog.hide()
+                //  progressDialog.hide()
                 if (t != null) {
                     println(t)
 
@@ -83,7 +83,6 @@ class DetailsFragment : Fragment() {
 
                         val gelen = DetailsFragmentArgs.fromBundle(it).agend
                         resultList = t.data[gelen]
-
                         binding.roleTextView.text = resultList.role?.displayName
                         binding.agentNameTextView.text = resultList.displayName
                         binding.txtaciklama.text = resultList.description
@@ -98,40 +97,44 @@ class DetailsFragment : Fragment() {
                             }
                         }
 
+                        resultList.abilities.forEachIndexed { index, abilities ->
+                            when (index) {
+
+                                0 -> Glide.with(binding.imgAbility)
+                                    .load(abilities.displayIcon)
+                                    .into(binding.imgAbility)
+                                1 -> Glide.with(binding.imgAbility1)
+                                    .load(abilities.displayIcon)
+                                    .into(binding.imgAbility1)
+                                2 -> Glide.with(binding.imgAbility2)
+                                    .load(abilities.displayIcon)
+                                    .into(binding.imgAbility2)
+                                3 -> Glide.with(binding.imgAbility3)
+                                    .load(abilities.displayIcon)
+                                    .into(binding.imgAbility3)
+                            }
+
                             resultList.abilities.forEachIndexed { index, ability ->
                                 when (index) {
-                                    0 -> Glide.with(binding.imgAbility)
-                                        .load(ability.displayIcon)
-                                        .into(binding.imgAbility)
-                                    1 -> Glide.with(binding.imgAbility1)
-                                        .load(ability.displayIcon)
-                                        .into(binding.imgAbility1)
-                                    2 -> Glide.with(binding.imgAbility2)
-                                        .load(ability.displayIcon)
-                                        .into(binding.imgAbility2)
-                                    3 -> Glide.with(binding.imgAbility3)
-                                        .load(ability.displayIcon)
-                                        .into(binding.imgAbility3)
+                                    0 -> binding.txtAbilities.text = ability.displayName
+                                    1 -> binding.txtAbilities2.text = ability.displayName
+                                    2 -> binding.txtAbilities3.text = ability.displayName
+                                    3 -> binding.txtAbilities4.text = ability.displayName
                                 }
                             }
 
-                        resultList.abilities.forEachIndexed { index, ability ->
-                            when (index) {
-                                0 -> binding.txtAbilities.text = ability.displayName
-                                1 -> binding.txtAbilities2.text = ability.displayName
-                                2 -> binding.txtAbilities3.text = ability.displayName
-                                3 -> binding.txtAbilities4.text = ability.displayName
-                            }
-                        }
+                            Glide.with(binding.imgrole)
+                                .load(resultList.role?.displayIcon)
+                                .into(binding.imgrole)
 
-                                Glide.with(binding.agentIconImageView)
-                                    .load(resultList.fullPortrait)
-                                    .into(binding.agentIconImageView)
+                            Glide.with(binding.agentIconImageView)
+                                .load(resultList.fullPortrait)
+                                .into(binding.agentIconImageView)
 
-                                Glide.with(binding.imageView)
-                                    .load(resultList.displayIcon)
-                                    // .placeholder(R.drawable.ic_launcher_background) // Resim yüklenene kadar gösterilecek placeholder
-                                    .into(binding.imageView) // Resmin yükleneceği ImageView
+                            Glide.with(binding.imageView)
+                                .load(resultList.displayIcon)
+                                // .placeholder(R.drawable.ic_launcher_background) // Resim yüklenene kadar gösterilecek placeholder
+                                .into(binding.imageView) // Resmin yükleneceği ImageView
 
                             binding.btnimageVolume.setOnClickListener {
                                 resultList.voiceLine.mediaList.forEachIndexed { index, voiceLine ->
@@ -152,10 +155,12 @@ class DetailsFragment : Fragment() {
                                 }
                             }
                         }
-                       }
-                   }
+                    }
+                }
+            }
         })
     }
+
     fun fetchAgends() {
         CoroutineScope(Dispatchers.Main).launch {
             viewDetailsModel.loadAgends("")

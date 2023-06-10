@@ -1,8 +1,6 @@
 package com.ayberk.valorantapp.Retrofit
 
-import com.ayberk.valorantapp.models.Ability
-import com.ayberk.valorantapp.models.Agends
-import com.ayberk.valorantapp.models.Data
+import com.ayberk.valorantapp.models.*
 import retrofit2.http.GET
 
 interface RetrofitInstance {
@@ -12,5 +10,14 @@ interface RetrofitInstance {
 
     @GET("v1/agents")
     fun getAbility():retrofit2.Call<Data>
+
+    @GET("v1/weapons")
+    fun getWeapons():retrofit2.Call<Weapons>
+
+    @GET("v1/weapons/skins")
+    fun getSkins():retrofit2.Call<com.ayberk.valorantapp.models.skin.Skin>
+
+    @GET("v1/maps")
+    fun getMaps():retrofit2.Call<com.ayberk.valorantapp.models.maps.Map>
 
 }

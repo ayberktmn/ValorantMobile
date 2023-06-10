@@ -65,6 +65,4 @@ class AgentsFragment : Fragment() {
             viewModel.loadAgends("")
         }
     }
-
-
 }

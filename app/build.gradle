@@ -73,11 +73,6 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.8'
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
-    implementation platform('com.google.firebase:firebase-bom:31.1.1')
-    implementation 'com.google.firebase:firebase-auth-ktx:21.2.0'
-    implementation 'com.google.firebase:firebase-analytics-ktx:21.2.1'
-    implementation 'com.google.firebase:firebase-firestore-ktx:24.4.5'
-    implementation 'com.google.firebase:firebase-storage-ktx:20.1.0'
     implementation("androidx.navigation:navigation-fragment-ktx:")
     implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.25'
     implementation("androidx.navigation:navigation-ui-ktx:")

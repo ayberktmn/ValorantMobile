@@ -8,14 +8,14 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardAgends"
         android:layout_width="match_parent"
-        android:layout_height="101dp"
-        android:layout_marginTop="2dp"
+        android:layout_height="99dp"
+        android:layout_marginTop="3dp"
         android:layout_marginBottom="2dp"
         app:cardBackgroundColor="#DA0606"
         app:cardCornerRadius="20dp">
 
         <LinearLayout
-            android:id="@+id/linearLayoutCoin"
+            android:id="@+id/linearLayoutAgends"
             android:layout_width="411dp"
             android:layout_height="101dp"
             android:layout_marginStart="1dp"
@@ -29,6 +29,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/cardAgendsimg"
                 android:layout_width="119dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -36,7 +37,7 @@
                 app:cardCornerRadius="15dp">
 
                 <ImageView
-                    android:id="@+id/imgAgend"
+                    android:id="@+id/imgAgends"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
@@ -51,12 +52,12 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/txtAgend"
+                    android:id="@+id/txtAgends"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:gravity="center"
                     android:fontFamily="@font/valofont"
+                    android:gravity="center"
                     android:text="TextView"
                     android:textColor="#000000"
                     android:textSize="20sp"
@@ -71,14 +72,14 @@
                     app:cardCornerRadius="10dp">
 
                     <TextView
-                        android:id="@+id/txtRol"
+                        android:id="@+id/txtAgendsRole"
                         android:layout_width="match_parent"
-                        android:layout_height="50dp"
+                        android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:fontFamily="@font/valofont"
                         android:gravity="center"
                         android:text="TextView"
-                        android:textColor="#C5C1C1"
+                        android:textColor="#FFFFFF"
                         android:textSize="18sp" />
                 </androidx.cardview.widget.CardView>
 

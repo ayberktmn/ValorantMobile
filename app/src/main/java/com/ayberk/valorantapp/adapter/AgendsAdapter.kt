@@ -5,17 +5,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.GridLayout
 import android.widget.ImageView
-import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.ayberk.valorantapp.AgentsFragment
 import com.ayberk.valorantapp.AgentsFragmentDirections
 import com.ayberk.valorantapp.R
-import com.ayberk.valorantapp.models.Agends
 import com.ayberk.valorantapp.models.Data
 import com.bumptech.glide.Glide
-import java.util.stream.Collectors.toSet
 
 
 class AgendsAdapter: RecyclerView.Adapter<AgendsAdapter.AgendsViewHolder>() {
@@ -48,9 +44,9 @@ class AgendsAdapter: RecyclerView.Adapter<AgendsAdapter.AgendsViewHolder>() {
     class AgendsViewHolder(val view: View):
         RecyclerView.ViewHolder(view) {
 
-        val txttitle = view.findViewById<TextView>(R.id.txtAgend)
-        val txtrol = view.findViewById<TextView>(R.id.txtRol)
-        val imageAgend = view.findViewById<ImageView>(R.id.imgAgend)
+        val txttitle = view.findViewById<TextView>(R.id.txtAgends)
+        val txtrol = view.findViewById<TextView>(R.id.txtAgendsRole)
+        val imageAgend = view.findViewById<ImageView>(R.id.imgAgends)
         val imagegrid = view.findViewById<GridLayout>(R.id.image_grid)
 
 

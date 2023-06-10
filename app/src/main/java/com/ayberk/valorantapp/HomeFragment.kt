@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.ayberk.valorantapp.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -22,9 +25,41 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.textView.setOnClickListener {
-            findNavController().navigate(R.id.agentsFragment)
+        binding.Agendsimg.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_agentsFragment)
         }
+        binding.weaponsimg.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_weaponsFragment)
+        }
+        binding.mapsimg.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_mapsFragment)
+        }
+
+        binding.bottomBar.setOnNavigationItemReselectedListener {}
+        binding.bottomBar.setOnItemSelectedListener {
+
+            when (it.itemId) {-
+                R.id.home -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_agentsFragment)
+                    true
+                }
+
+                R.id.guns -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_weaponsFragment)
+                    true
+                }
+
+                R.id.maps -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_mapsFragment)
+                    true
+                }
+                else -> {
+
+                }
+            }
+            true
+        }
+
     }
 
     override fun onCreateView(
@@ -36,5 +71,4 @@ class HomeFragment : Fragment() {
         val view = binding.root
         return view
     }
-
 }

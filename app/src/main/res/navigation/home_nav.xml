@@ -22,6 +22,12 @@
         <action
             android:id="@+id/action_homeFragment_to_agentsFragment"
             app:destination="@id/agentsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_weaponsFragment"
+            app:destination="@id/weaponsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mapsFragment"
+            app:destination="@id/mapsFragment" />
     </fragment>
     <fragment
         android:id="@+id/agentsFragment"
@@ -40,4 +46,29 @@
         <argument android:name="agend"
             app:argType="integer" />
     </fragment>
+    <fragment
+        android:id="@+id/weaponsFragment"
+        android:name="com.ayberk.valorantapp.WeaponsFragment"
+        android:label="fragment_weapons"
+        tools:layout="@layout/fragment_weapons" >
+        <action
+            android:id="@+id/action_weaponsFragment_to_weponsDetailsFragment"
+            app:destination="@id/weponsDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weponsDetailsFragment"
+        android:name="com.ayberk.valorantapp.WeponsDetailsFragment"
+        android:label="fragment_wepons_details"
+        tools:layout="@layout/fragment_wepons_details" >
+        <argument android:name="weponsDetail"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_weponsDetailsFragment_to_weaponsFragment"
+            app:destination="@id/weaponsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.ayberk.valorantapp.MapsFragment"
+        android:label="fragment_maps"
+        tools:layout="@layout/fragment_maps" />
 </navigation>
