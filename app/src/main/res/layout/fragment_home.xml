@@ -22,8 +22,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="134dp"
-        android:layout_height="115dp"
+        android:layout_width="140dp"
+        android:layout_height="98dp"
         android:layout_marginStart="17dp"
         android:layout_marginBottom="54dp"
         android:src="@drawable/logo"
@@ -141,5 +141,21 @@
         app:layout_constraintTop_toBottomOf="@+id/weaponsimg"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/home_menu" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Agends Cards"
+        android:textColor="#090808"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.731"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -20,4 +20,10 @@ interface RetrofitInstance {
     @GET("v1/maps")
     fun getMaps():retrofit2.Call<com.ayberk.valorantapp.models.maps.Map>
 
+    @GET("v1/playercards")
+    fun getCards():retrofit2.Call<com.ayberk.valorantapp.models.playerscard.Cards>
+
+    @GET("v1/competitivetiers")
+    fun getCompetitive():retrofit2.Call<com.ayberk.valorantapp.models.competitive.Competitive>
+
 }

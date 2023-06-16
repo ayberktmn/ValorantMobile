@@ -14,6 +14,8 @@ class AgendsViewModel@Inject constructor(private val repo: AgendsRetrofit) : Vie
     var weaponsList : MutableLiveData<Weapons>
     var weaponsSkinList : MutableLiveData<com.ayberk.valorantapp.models.skin.Skin>
     var mapsList : MutableLiveData<com.ayberk.valorantapp.models.maps.Map>
+    var CardsList : MutableLiveData<com.ayberk.valorantapp.models.playerscard.Cards>
+    var CompetitiveList : MutableLiveData<com.ayberk.valorantapp.models.competitive.Competitive>
 
 
     init {
@@ -21,6 +23,8 @@ class AgendsViewModel@Inject constructor(private val repo: AgendsRetrofit) : Vie
         weaponsList = MutableLiveData()
         weaponsSkinList = MutableLiveData()
         mapsList = MutableLiveData()
+        CardsList = MutableLiveData()
+        CompetitiveList = MutableLiveData()
     }
 
     fun getObserverLiveData(): MutableLiveData<Agends> {
@@ -53,5 +57,20 @@ class AgendsViewModel@Inject constructor(private val repo: AgendsRetrofit) : Vie
 
     fun  loadMaps(page:String){
         repo.getMaps(mapsList)
+    }
+
+    fun getCards(): MutableLiveData<com.ayberk.valorantapp.models.playerscard.Cards> {
+        return CardsList
+    }
+
+    fun loadCards(){
+        repo.getCards(CardsList)
+    }
+    fun getCompetitive(): MutableLiveData<com.ayberk.valorantapp.models.competitive.Competitive> {
+        return CompetitiveList
+    }
+
+    fun loadCompetitive(){
+        repo.getCompetitive(CompetitiveList)
     }
 }

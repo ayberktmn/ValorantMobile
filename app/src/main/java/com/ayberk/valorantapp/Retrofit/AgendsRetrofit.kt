@@ -60,6 +60,7 @@ class AgendsRetrofit @Inject constructor(private val retroService: RetrofitInsta
         retroService.getMaps().enqueue(object : retrofit2.Callback<com.ayberk.valorantapp.models.maps.Map>{
             override fun onResponse(call: Call<com.ayberk.valorantapp.models.maps.Map>, response: Response<com.ayberk.valorantapp.models.maps.Map>) {
                 liveData.postValue(response.body())
+
             }
 
             override fun onFailure(call: Call<com.ayberk.valorantapp.models.maps.Map>, t: Throwable) {
@@ -67,4 +68,35 @@ class AgendsRetrofit @Inject constructor(private val retroService: RetrofitInsta
             }
         })
     }
+
+    fun getCards(liveData: MutableLiveData<com.ayberk.valorantapp.models.playerscard.Cards>){
+        retroService.getCards().enqueue(object : retrofit2.Callback<com.ayberk.valorantapp.models.playerscard.Cards>{
+            override fun onResponse(call: Call<com.ayberk.valorantapp.models.playerscard.Cards>, response: Response<com.ayberk.valorantapp.models.playerscard.Cards>) {
+                liveData.postValue(response.body())
+
+            }
+
+            override fun onFailure(call: Call<com.ayberk.valorantapp.models.playerscard.Cards>, t: Throwable) {
+                liveData.postValue(null)
+
+            }
+        })
+    }
+
+    fun getCompetitive(liveData: MutableLiveData<com.ayberk.valorantapp.models.competitive.Competitive>){
+        retroService.getCompetitive().enqueue(object : retrofit2.Callback<com.ayberk.valorantapp.models.competitive.Competitive>{
+            override fun onResponse(call: Call<com.ayberk.valorantapp.models.competitive.Competitive>, response: Response<com.ayberk.valorantapp.models.competitive.Competitive>) {
+                liveData.postValue(response.body())
+
+
+            }
+
+            override fun onFailure(call: Call<com.ayberk.valorantapp.models.competitive.Competitive>, t: Throwable) {
+                liveData.postValue(null)
+
+
+            }
+        })
+    }
+
 }

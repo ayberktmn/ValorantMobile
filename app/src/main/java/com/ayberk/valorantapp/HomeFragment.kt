@@ -34,6 +34,12 @@ class HomeFragment : Fragment() {
         binding.mapsimg.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_mapsFragment)
         }
+        binding.imageView5.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_cardsFragment)
+        }
+        binding.imageView6.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_competitiveFragment)
+        }
 
         binding.bottomBar.setOnNavigationItemReselectedListener {}
         binding.bottomBar.setOnItemSelectedListener {
@@ -51,6 +57,16 @@ class HomeFragment : Fragment() {
 
                 R.id.maps -> {
                     Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_mapsFragment)
+                    true
+                }
+
+                R.id.Competitives -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_competitiveFragment)
+                    true
+                }
+
+                R.id.Cards -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_cardsFragment)
                     true
                 }
                 else -> {

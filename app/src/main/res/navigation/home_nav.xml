@@ -28,6 +28,15 @@
         <action
             android:id="@+id/action_homeFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cardsFragment"
+            app:destination="@id/cardsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_cardsFragment2"
+            app:destination="@id/cardsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_competitiveFragment"
+            app:destination="@id/competitiveFragment" />
     </fragment>
     <fragment
         android:id="@+id/agentsFragment"
@@ -71,4 +80,14 @@
         android:name="com.ayberk.valorantapp.MapsFragment"
         android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" />
+    <fragment
+        android:id="@+id/cardsFragment"
+        android:name="com.ayberk.valorantapp.CardsFragment"
+        android:label="fragment_cards"
+        tools:layout="@layout/fragment_cards" />
+    <fragment
+        android:id="@+id/competitiveFragment"
+        android:name="com.ayberk.valorantapp.CompetitiveFragment"
+        android:label="fragment_competitive"
+        tools:layout="@layout/fragment_competitive" />
 </navigation>
