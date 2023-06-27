@@ -11,8 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.ayberk.valorantapp.ViewModel.AgendsViewModel
 import com.ayberk.valorantapp.adapter.AgendsAdapter
 import com.ayberk.valorantapp.databinding.FragmentAgentsBinding
-import com.ayberk.valorantapp.databinding.FragmentHomeBinding
-import com.ayberk.valorantapp.models.Agends
+import com.ayberk.valorantapp.models.Agends.Agends
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
 

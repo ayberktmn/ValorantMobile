@@ -3,15 +3,10 @@ package com.ayberk.valorantapp.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.GridLayout
-import android.widget.GridView
 import android.widget.ImageView
 import android.widget.TextView
-import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.ayberk.valorantapp.AgentsFragmentDirections
 import com.ayberk.valorantapp.R
-import com.ayberk.valorantapp.models.Data
 import com.bumptech.glide.Glide
 
 

@@ -57,22 +57,19 @@
         app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.154"
+        app:layout_constraintVertical_bias="0.214"
         tools:ignore="MissingConstraints" />
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="133dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="45dp"
         android:src="@drawable/agent"
-        app:layout_constraintBottom_toTopOf="@+id/Agendsimg"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintHorizontal_bias="0.043"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="@+id/imageView6" />
 
     <ImageView
         android:id="@+id/Agendsimg"
@@ -112,8 +109,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="7dp"
         android:src="@drawable/weapons"
+        app:layout_constraintBottom_toTopOf="@+id/weaponsimg"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mapsimg" />
 
@@ -141,21 +140,5 @@
         app:layout_constraintTop_toBottomOf="@+id/weaponsimg"
         app:layout_constraintVertical_bias="1.0"
         app:menu="@menu/home_menu" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Agends Cards"
-        android:textColor="#090808"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.731"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

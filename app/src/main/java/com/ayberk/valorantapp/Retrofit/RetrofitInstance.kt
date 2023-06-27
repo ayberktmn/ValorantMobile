@@ -1,6 +1,9 @@
 package com.ayberk.valorantapp.Retrofit
 
 import com.ayberk.valorantapp.models.*
+import com.ayberk.valorantapp.models.Agends.Agends
+import com.ayberk.valorantapp.models.Agends.Data
+import com.ayberk.valorantapp.models.Agends.Weapons
 import retrofit2.http.GET
 
 interface RetrofitInstance {

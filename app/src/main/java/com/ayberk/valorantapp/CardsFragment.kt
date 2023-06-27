@@ -9,55 +9,54 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.ayberk.valorantapp.ViewModel.AgendsViewModel
-import com.ayberk.valorantapp.adapter.MapsAdapter
-import com.ayberk.valorantapp.databinding.FragmentMapsBinding
+import com.ayberk.valorantapp.adapter.CardsAdapter
+import com.ayberk.valorantapp.databinding.FragmentCardsBinding
+import com.ayberk.valorantapp.models.playerscard.Cards
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
-class MapsFragment : Fragment() {
+class CardsFragment : Fragment() {
 
-    private var _binding: FragmentMapsBinding? = null
+    private var _binding : FragmentCardsBinding? = null
     private val binding get() = _binding!!
-    private lateinit var mapsAdapter: MapsAdapter
-    private val viewDetailsModel: AgendsViewModel by viewModels()
+    private val viewCompetitive: AgendsViewModel by viewModels()
+    private lateinit var cardsAdapter: CardsAdapter
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMapsBinding.inflate(inflater,container,false)
+        _binding = FragmentCardsBinding.inflate(inflater,container,false)
         val view = binding.root
-        binding.rcylerMaps.layoutManager = StaggeredGridLayoutManager(2,StaggeredGridLayoutManager.VERTICAL)
-        initRecyclerViews()
-        fetchAgents()
+        binding.rcylerCompetitive.layoutManager = StaggeredGridLayoutManager(3, StaggeredGridLayoutManager.VERTICAL)
 
-        viewDetailsModel.getMaps().observe(viewLifecycleOwner,object :
-            Observer<com.ayberk.valorantapp.models.maps.Map> {
-            override fun onChanged(t: com.ayberk.valorantapp.models.maps.Map?) {
-                //  progressDialog.hide()
+        initRecyclerViews()
+        fetchCompetitive()
+
+        viewCompetitive.getCards().observe(viewLifecycleOwner, object : Observer<com.ayberk.valorantapp.models.playerscard.Cards> {
+            override fun onChanged(t: Cards?) {
                 if (t != null) {
-                    mapsAdapter.setLists(t.data)
+                    cardsAdapter.setLists(t.data)
                 }
             }
         })
-
         return view
     }
 
-
     fun initRecyclerViews(){
 
-        mapsAdapter = MapsAdapter()
-        binding.rcylerMaps.adapter = mapsAdapter
+        cardsAdapter = CardsAdapter()
+        binding.rcylerCompetitive.adapter = cardsAdapter
 
     }
 
-    fun fetchAgents() {
+    fun fetchCompetitive() {
         CoroutineScope(Dispatchers.Main).launch {
-            viewDetailsModel.loadMaps("")
+            viewCompetitive.loadCards()
         }
     }
 }

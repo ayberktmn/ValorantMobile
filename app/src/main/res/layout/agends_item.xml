@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout android:id="@+id/image_grid"
+<GridLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/image_grid"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -11,7 +12,7 @@
         android:layout_height="99dp"
         android:layout_marginTop="3dp"
         android:layout_marginBottom="2dp"
-        app:cardBackgroundColor="#DA0606"
+        app:cardBackgroundColor="#3F51B5"
         app:cardCornerRadius="20dp">
 
         <LinearLayout
@@ -30,7 +31,7 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardAgendsimg"
-                android:layout_width="119dp"
+                android:layout_width="146dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 app:cardBackgroundColor="#000000"
@@ -46,7 +47,7 @@
             </androidx.cardview.widget.CardView>
 
             <LinearLayout
-                android:layout_width="286dp"
+                android:layout_width="248dp"
                 android:layout_height="89dp"
                 android:layout_weight="1"
                 android:orientation="vertical">
@@ -54,7 +55,7 @@
                 <TextView
                     android:id="@+id/txtAgends"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="36dp"
                     android:layout_weight="1"
                     android:fontFamily="@font/valofont"
                     android:gravity="center"
@@ -64,11 +65,11 @@
                     android:textStyle="bold" />
 
                 <androidx.cardview.widget.CardView
-                    android:layout_width="262dp"
-                    android:layout_height="40dp"
+                    android:layout_width="178dp"
+                    android:layout_height="35dp"
                     android:layout_gravity="center"
                     android:layout_weight="1"
-                    app:cardBackgroundColor="#6E1313"
+                    app:cardBackgroundColor="#485FE1"
                     app:cardCornerRadius="10dp">
 
                     <TextView
@@ -83,6 +84,37 @@
                         android:textSize="18sp" />
                 </androidx.cardview.widget.CardView>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="75dp"
+                android:layout_height="85dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imgLike"
+                    android:layout_width="60dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/like"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.046"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.402"
+                    tools:ignore="ImageContrastCheck" />
+
+                <ImageView
+                    android:id="@+id/imgDislike"
+                    android:layout_width="60dp"
+                    android:layout_height="75dp"
+                    android:layout_marginBottom="96dp"
+                    android:src="@drawable/dislike"
+                    app:layout_constraintBottom_toTopOf="@+id/textView4"
+                    app:layout_constraintEnd_toStartOf="@+id/btnimageVolume"
+                    app:layout_constraintHorizontal_bias="0.029"
+                    app:layout_constraintStart_toStartOf="parent" />
             </LinearLayout>
 
         </LinearLayout>

@@ -5,18 +5,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.lifecycle.Observer
-import androidx.lifecycle.Transformations.map
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.ayberk.valorantapp.ViewModel.AgendsViewModel
-import com.ayberk.valorantapp.adapter.AgendsAdapter
 import com.ayberk.valorantapp.adapter.WeaponsAdapter
-import com.ayberk.valorantapp.databinding.FragmentAgentsBinding
 import com.ayberk.valorantapp.databinding.FragmentWeaponsBinding
-import com.ayberk.valorantapp.models.Agends
-import com.ayberk.valorantapp.models.Weapons
+import com.ayberk.valorantapp.models.Agends.DataX
+import com.ayberk.valorantapp.models.Agends.Weapons
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -28,7 +24,7 @@ class WeaponsFragment : Fragment() {
     private var _binding: FragmentWeaponsBinding? = null
     private val binding get() = _binding!!
     private lateinit var WeaponsAdapter: WeaponsAdapter
-    lateinit var resultList: com.ayberk.valorantapp.models.DataX
+    lateinit var resultList: DataX
 
     val viewWeaponsModel by lazy {
         ViewModelProvider(this, defaultViewModelProviderFactory).get(AgendsViewModel::class.java)

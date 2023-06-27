@@ -1,10 +1,11 @@
-package com.ayberk.valorantapp.models
+package com.ayberk.valorantapp.models.Agends
 
-data class Level(
+data class Chroma(
     val assetPath: String,
     val displayIcon: String,
     val displayName: String,
-    val levelItem: String,
+    val fullRender: String,
     val streamedVideo: String,
+    val swatch: String,
     val uuid: String
 )

@@ -1,14 +1,10 @@
 package com.ayberk.valorantapp
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.ui.setupWithNavController
 import com.ayberk.valorantapp.databinding.FragmentHomeBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,8 +19,10 @@ class HomeFragment : Fragment() {
 
     }
 
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        setHasOptionsMenu(true)
         binding.Agendsimg.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_agentsFragment)
         }
@@ -41,17 +39,13 @@ class HomeFragment : Fragment() {
             findNavController().navigate(R.id.action_homeFragment_to_competitiveFragment)
         }
 
-        binding.bottomBar.setOnNavigationItemReselectedListener {}
+       // binding.bottomBar.setOnNavigationItemReselectedListener {}
         binding.bottomBar.setOnItemSelectedListener {
 
             when (it.itemId) {-
-                R.id.home -> {
-                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_agentsFragment)
-                    true
-                }
 
-                R.id.guns -> {
-                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_weaponsFragment)
+                R.id.home -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_self)
                     true
                 }
 
@@ -69,12 +63,20 @@ class HomeFragment : Fragment() {
                     Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_cardsFragment)
                     true
                 }
+
+                R.id.favoriler -> {
+                    Navigation.findNavController(binding.root).navigate(R.id.action_homeFragment_to_favoriFragment)
+                    true
+                }
+
                 else -> {
 
                 }
             }
             true
         }
+
+
 
     }
 

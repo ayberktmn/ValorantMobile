@@ -8,11 +8,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.ayberk.valorantapp.AgentsFragmentDirections
 import com.ayberk.valorantapp.R
 import com.ayberk.valorantapp.WeaponsFragmentDirections
-import com.ayberk.valorantapp.WeponsDetailsFragment
-import com.ayberk.valorantapp.models.DataX
+import com.ayberk.valorantapp.models.Agends.DataX
 import com.bumptech.glide.Glide
 
 class WeaponsAdapter: RecyclerView.Adapter<WeaponsAdapter.WeaponsViewHolder>() {

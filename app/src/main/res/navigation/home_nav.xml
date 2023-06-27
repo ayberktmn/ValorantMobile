@@ -23,9 +23,6 @@
             android:id="@+id/action_homeFragment_to_agentsFragment"
             app:destination="@id/agentsFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_weaponsFragment"
-            app:destination="@id/weaponsFragment" />
-        <action
             android:id="@+id/action_homeFragment_to_mapsFragment"
             app:destination="@id/mapsFragment" />
         <action
@@ -37,6 +34,15 @@
         <action
             android:id="@+id/action_homeFragment_to_competitiveFragment"
             app:destination="@id/competitiveFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_favoriFragment"
+            app:destination="@id/favoriFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_weaponsFragment"
+            app:destination="@id/weaponsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_self"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/agentsFragment"
@@ -46,6 +52,9 @@
         <action
             android:id="@+id/action_agentsFragment_to_detailsFragment"
             app:destination="@id/detailsFragment" />
+        <action
+            android:id="@+id/action_agentsFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
@@ -54,6 +63,9 @@
         tools:layout="@layout/fragment_details" >
         <argument android:name="agend"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_detailsFragment_to_agentsFragment"
+            app:destination="@id/agentsFragment" />
     </fragment>
     <fragment
         android:id="@+id/weaponsFragment"
@@ -90,4 +102,16 @@
         android:name="com.ayberk.valorantapp.CompetitiveFragment"
         android:label="fragment_competitive"
         tools:layout="@layout/fragment_competitive" />
+    <fragment
+        android:id="@+id/favoriFragment"
+        android:name="com.ayberk.valorantapp.FavoriFragment"
+        android:label="fragment_favori"
+        tools:layout="@layout/fragment_favori" >
+        <action
+            android:id="@+id/action_favoriFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_favoriFragment_self"
+            app:destination="@id/favoriFragment" />
+    </fragment>
 </navigation>

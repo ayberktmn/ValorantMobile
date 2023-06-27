@@ -1,4 +1,4 @@
-package com.ayberk.valorantapp.models
+package com.ayberk.valorantapp.models.Agends
 
 data class Media(
     val id: Int,

@@ -1,6 +1,5 @@
 package com.ayberk.valorantapp
 
-import android.app.ProgressDialog
 import android.media.MediaPlayer
 import android.net.Uri
 import android.os.Bundle
@@ -9,18 +8,14 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ProgressBar
-import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import com.ayberk.valorantapp.ViewModel.AbilityViewModel
 import com.ayberk.valorantapp.ViewModel.AgendsViewModel
-import com.ayberk.valorantapp.databinding.FragmentAgentsBinding
 import com.ayberk.valorantapp.databinding.FragmentDetailsBinding
-import com.ayberk.valorantapp.models.Ability
-import com.ayberk.valorantapp.models.Agends
-import com.ayberk.valorantapp.models.Data
+import com.ayberk.valorantapp.models.Agends.Agends
+import com.ayberk.valorantapp.models.Agends.Data
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.*
@@ -32,7 +27,7 @@ class DetailsFragment : Fragment() {
     private val binding get() = _binding!!
     private val viewDetailsModel: AgendsViewModel by viewModels()
     private val abilityViewModel: AbilityViewModel by viewModels()
-    lateinit var resultList: com.ayberk.valorantapp.models.Data
+    lateinit var resultList: Data
 
 
 
@@ -60,14 +55,9 @@ class DetailsFragment : Fragment() {
         fetchAgends()
 
         binding.backButtonImageView.setOnClickListener {
-            findNavController().navigate(R.id.agentsFragment)
+            findNavController().navigate(R.id.action_detailsFragment_to_agentsFragment)
         }
-     /*   Toast.makeText(requireContext(),"Lütfen biraz Bekleyiniz", Toast.LENGTH_SHORT).show()
-        progressDialog = ProgressDialog(requireContext())
-        progressDialog.setTitle("Lütfen Bekleyin")
-        progressDialog.setMessage("Yükleniyor...")
-        progressDialog.setCancelable(false) // blocks UI interaction
-        progressDialog.show() */
+
         return view
     }
 

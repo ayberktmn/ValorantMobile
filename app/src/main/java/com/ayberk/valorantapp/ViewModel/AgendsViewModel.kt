@@ -3,7 +3,8 @@ package com.ayberk.valorantapp.ViewModel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.ayberk.valorantapp.Retrofit.AgendsRetrofit
-import com.ayberk.valorantapp.models.*
+import com.ayberk.valorantapp.models.Agends.Agends
+import com.ayberk.valorantapp.models.Agends.Weapons
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 

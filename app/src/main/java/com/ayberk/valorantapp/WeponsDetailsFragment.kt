@@ -9,16 +9,11 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
-import com.ayberk.valorantapp.ViewModel.AbilityViewModel
 import com.ayberk.valorantapp.ViewModel.AgendsViewModel
 import com.ayberk.valorantapp.adapter.WeaponSkinsAdapter
-import com.ayberk.valorantapp.adapter.WeaponsAdapter
 import com.ayberk.valorantapp.databinding.FragmentWeponsDetailsBinding
-import com.ayberk.valorantapp.models.DataX
-import com.ayberk.valorantapp.models.Skin
-import com.ayberk.valorantapp.models.WeaponStats
-import com.ayberk.valorantapp.models.Weapons
+import com.ayberk.valorantapp.models.Agends.DataX
+import com.ayberk.valorantapp.models.Agends.Weapons
 import com.bumptech.glide.Glide
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
@@ -31,7 +26,6 @@ class WeponsDetailsFragment : Fragment() {
     private var _binding: FragmentWeponsDetailsBinding? = null
     private val binding get() = _binding!!
     lateinit var weaponsDetailList : DataX
-    lateinit var weaponsSkinList : Skin
     private val WeponsDetailsModel: AgendsViewModel by viewModels()
     private lateinit var WeaponskinsAdapter: WeaponSkinsAdapter
 

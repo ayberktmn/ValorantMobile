@@ -1,7 +1,9 @@
 package com.ayberk.valorantapp.Retrofit
 
 import androidx.lifecycle.MutableLiveData
-import com.ayberk.valorantapp.models.*
+import com.ayberk.valorantapp.models.Agends.Agends
+import com.ayberk.valorantapp.models.Agends.Data
+import com.ayberk.valorantapp.models.Agends.Weapons
 import retrofit2.Call
 import retrofit2.Response
 import javax.inject.Inject
